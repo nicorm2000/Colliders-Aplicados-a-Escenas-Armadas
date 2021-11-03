@@ -56,12 +56,10 @@ public class PlayerMovement : MonoBehaviour
                 transform.localScale = new Vector3(1, 1, 1);
             }
         }
-
         if (triggerTime < 0)
         {
             triggerTime = 0.04f;
         }
-
     }
 
     private void OnCollisionStay(Collision collision)
@@ -75,11 +73,7 @@ public class PlayerMovement : MonoBehaviour
                 wall.transform.rotation = Quaternion.Euler(0, 80, 0);
                 countTime = 0;
                 isCollide = false;
-
-
             }
-
-
         }
 
         if (collision.gameObject.CompareTag("Wall") && isCollide == false)
@@ -92,10 +86,7 @@ public class PlayerMovement : MonoBehaviour
                 countTime = 0;
                 isCollide = true;
             }
-
-
         }
-
     }
 
     private void OnCollisionEnter(Collision collision) 
